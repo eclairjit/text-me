@@ -14,10 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 
 import userRouter from "./routes/user.routes.js";
 import chatRouter from "./routes/chat.routes.js";
+import messageRouter from "./routes/message.routes.js";
 
 // routes declaration
 
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/chat", chatRouter);
+app.use("/api/v1/message", messageRouter);
 
 export default app;
