@@ -13,9 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 // routes import
 
 import userRouter from "./routes/user.routes.js";
+import chatRouter from "./routes/chat.routes.js";
 
 // routes declaration
 
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/chat", chatRouter);
 
 export default app;

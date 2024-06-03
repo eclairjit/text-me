@@ -180,8 +180,6 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
       throw new apiError(401, "User not found. Invalid refresh token.");
     }
 
-    console.log("Equality: ", user);
-
     if (user.refreshToken !== receivedRefreshToken) {
       throw new apiError(
         401,
